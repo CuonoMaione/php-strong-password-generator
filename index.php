@@ -1,37 +1,41 @@
-ciaooo
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Php-Psw</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Strong Password Generator
+        </h1>
+        <h2>
+            Genera una password sicura
+        </h2>
 
+        <div class="forms">
+            <form action="./" method="GET">
+            <label for="number">Lunghezza Password</label>
+            <input type="number" name="pswLenght" id="pswLenght">
+            <button type="submit">Invia</button>
+            </form>
 
-<?php 
+            Password =
+          <?php 
+
+    include_once __DIR__ . '/functions.php';
 
    if (isset($_GET['pswLength'])){
 
-   }
-
-
-    function getRandomPassword($passwordLength){
-        $characters = 'qwertyuiopasdfghjklzxcvbnm';
-        $numbers = '1234567890';
-        $simbols = '!"£$%&/()=@#][';
-    
-
-    $actualCharacters = strtoupper($characters) . $characters . $numbers . $simbols; 
-    
-    $newPassword = '';
-
-
-    if ($passwordLength >= 6 && $passwordLength <= 30) {
-        while ( strlen($newPassword) < $passwordLength ) {
-            
-            $randomIndex = rand(0, strlen($actualCharacters) - 1);
-
-            $newPassword .= $actualCharacters[$randomIndex];
-        }
-        return $newPassword;
-    }else {
-        return false;
-    }
-
-return $actualCharacters ;
-}
- var_dump(getRandomPassword(7));
+   };
+   
+   echo getRandomPassword(8);
 ?>
+
+        </div>
+    </div>
+    
+</body>
+</html>
