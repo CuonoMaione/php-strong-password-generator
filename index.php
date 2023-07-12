@@ -17,22 +17,12 @@ ciaooo
     $actualCharacters = strtoupper($characters) . $characters . $numbers . $simbols; 
     
     $newPassword = '';
-/*
-    if ($passwordLength >= 1 && $passwordLength <= 30){
-        while ( strlen($newPassword) < $passwordLength ) {
-            $randomIndex = rand(0, strlen($actualCharacters) - 1);
-            $newPassword = $actualCharacters[$randomIndex];   
-        }
-        return $newPassword;
-  } else {
-    return false;   
-}
-*/
+
 
     if ($passwordLength >= 6 && $passwordLength <= 30) {
         while ( strlen($newPassword) < $passwordLength ) {
             
-            $randomIndex .= rand(0, strlen($actualCharacters) - 1);
+            $randomIndex = rand(0, strlen($actualCharacters) - 1);
 
             $newPassword .= $actualCharacters[$randomIndex];
         }
