@@ -17,8 +17,8 @@ ciaooo
     $actualCharacters = strtoupper($characters) . $characters . $numbers . $simbols; 
     
     $newPassword = '';
-
-    if ($passwordLength > 1){
+/*
+    if ($passwordLength >= 1 && $passwordLength <= 30){
         while ( strlen($newPassword) < $passwordLength ) {
             $randomIndex = rand(0, strlen($actualCharacters) - 1);
             $newPassword = $actualCharacters[$randomIndex];   
@@ -27,8 +27,21 @@ ciaooo
   } else {
     return false;   
 }
+*/
 
-return $actualCharacters;
+    if ($passwordLength >= 6 && $passwordLength <= 30) {
+        while ( strlen($newPassword) < $passwordLength ) {
+            
+            $randomIndex .= rand(0, strlen($actualCharacters) - 1);
+
+            $newPassword .= $actualCharacters[$randomIndex];
+        }
+        return $newPassword;
+    }else {
+        return false;
+    }
+
+return $actualCharacters ;
 }
- var_dump(getRandomPassword(2));
+ var_dump(getRandomPassword(7));
 ?>
